@@ -1,33 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ's Mountain Bikes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .hr {
+            border: 1px solid #343a40;
+        }
+        .product-img {
+            width: 100%;
+            height: auto;
+        }
+        .orders-section {
+            border-left: 2px solid #343a40;
+            padding-left: 20px;
+        }
+        .form-control[readonly] {
+            background-color: #e9ecef;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-	<div class="row">
-	    <div class="col-12 text-center">
-		<h2>JJ's Mountain Bikes</h2>
-		<hr class="hr" />
-	    </div>
-	</div>
-	<div class="row">
-	    <div class="col-4 text-center">
-		<label id="product1"> TREK </label>
-		<img src="pic1.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-		<label for="product1" id="price1">10000.00</label>
-		<input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
-	    </div>
-	    <div class="col-4 text-center">
-		<label id="product2"> ORBEA</label>
-		<img src="pic2.jpg" style="width:400px;height:500px;" class="img-thumbnail"/><br>
-		<label for="product2" id="price2">15000.00</label>
-		<input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
-	    </div>
-	    <div class="col-4">
-		<label for="carts"> Orders </label<br>
-		<textarea class="form-control" rows="29" id="carts" cols="200" readonly style="width:350px;height: 400;font-size: 12px;"> </textarea>
-		<input type="text" class="form-control border-0" id="total" readonly placeholder="Total"/>
-		<input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
-		<input type="text" class="form-control border-0" id="change" readonly placeholder="Change"/>
-	    </div>
-	</div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>JJ's Mountain Bikes</h2>
+                <hr class="hr" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <label id="product1">TREK</label>
+                <img src="pic1.jpg" class="img-thumbnail product-img"/><br>
+                <label for="product1" id="price1">10000.00</label>
+                <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-4 text-center">
+                <label id="product2">ORBEA</label>
+                <img src="pic2.jpg" class="img-thumbnail product-img"/><br>
+                <label for="product2" id="price2">15000.00</label>
+                <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/><br>
+            </div>
+            <div class="col-md-4 orders-section">
+                <label for="carts">Orders</label><br>
+                <textarea class="form-control" rows="10" id="carts" readonly></textarea>
+                <input type="text" class="form-control" id="total" readonly placeholder="Total"/>
+                <input type="number" class="form-control" id="cash" placeholder="Cash Tendered"/>
+                <input type="text" class="form-control" id="change" readonly placeholder="Change"/>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
+</html>
