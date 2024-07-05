@@ -11,32 +11,30 @@ var total = document.getElementById("total");
 var cash = document.getElementById("cash");
 var change = document.getElementById("change");
 
-function addOrder(productName, price, quantity) {
-    var order = quantity + ' pc/s x ' + price + '------' + productName + '------ Php' + (parseFloat(quantity) * parseFloat(price)) + '\n';
-    carts.textContent += order;
-    calculateTotal();
-}
-
-function calculateTotal() {
-    var totalAmount = 0;
+function addOrder() {
+    carts.textContent = "";
+    let totalAmount = 0;
     if (parseFloat(qty1.value) > 0) {
+        var order = qty1.value.toString() + ' pc/s x ' + price1.textContent + '------' + product1.textContent + '------ Php ' + (parseFloat(qty1.value) * parseFloat(price1.textContent)).toFixed(2) + '\n';
+        carts.textContent += order;
         totalAmount += parseFloat(qty1.value) * parseFloat(price1.textContent);
     }
     if (parseFloat(qty2.value) > 0) {
+        var order = qty2.value.toString() + ' pc/s x ' + price2.textContent + '------' + product2.textContent + '------ Php ' + (parseFloat(qty2.value) * parseFloat(price2.textContent)).toFixed(2) + '\n';
+        carts.textContent += order;
         totalAmount += parseFloat(qty2.value) * parseFloat(price2.textContent);
     }
     total.value = totalAmount.toFixed(2);
+    calculateChange();
 }
 
-cash.addEventListener("keyup", function () {
-    var cashValue = parseFloat(cash.value);
-    var totalValue = parseFloat(total.value);
-    if (!isNaN(cashValue) && !isNaN(totalValue)) {
-        change.value = (cashValue - totalValue).toFixed(2);
-    } else {
-        change.value = "";
-    }
-});
+function calculateChange() {
+    const totalAmount = parseFloat(total.value) || 0;
+    const cashTendered = parseFloat(cash.value) || 0;
+    const changeAmount = cashTendered - totalAmount;
+    change.value = changeAmount >= 0 ? changeAmount.toFixed(2) : '0.00';
+}
 
-qty1.addEventListener("keyup", calculateTotal);
-qty2.addEventListener("keyup", calculateTotal);
+qty1.addEventListener("keyup", addOrder);
+qty2.addEventListener("keyup", addOrder);
+cash.addEventListener("keyup", calculateChange);
