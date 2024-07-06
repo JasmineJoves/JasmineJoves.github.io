@@ -17,7 +17,7 @@
             background-color: #ffffff; /* White container background */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px; /* Increased padding */
+            padding: 20px; /* Adjusted padding */
         }
         h2 {
             margin-bottom: 20px;
@@ -30,16 +30,16 @@
         .product-img {
             width: 100%;
             height: auto;
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 120px;
+            max-height: 120px;
             object-fit: cover;
         }
         .product-section {
-            margin-bottom: 20px; /* Reduced bottom margin for product sections */
+            margin-bottom: 15px; /* Reduced bottom margin for product sections */
         }
         .orders-section {
             border-left: 2px solid #0d6efd; /* Dark blue left border for orders section */
-            padding-left: 20px; /* Reduced left padding */
+            padding-left: 10px; /* Reduced left padding */
         }
         .form-control[readonly] {
             background-color: #e9ecef; /* Light gray readonly input background */
@@ -54,8 +54,8 @@
         }
         .footer {
             text-align: center;
-            margin-top: 30px; /* Increased top margin */
-            padding: 15px; /* Increased padding */
+            margin-top: 20px; /* Adjusted top margin */
+            padding: 10px; /* Adjusted padding */
             background-color: #0d6efd; /* Dark blue footer background */
             color: #ffffff; /* White text color for footer */
             border-radius: 5px;
@@ -74,21 +74,21 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product1" class="bold-label">TREK</label><br>
                         <img src="pic1.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product1" id="price1">10000.00</label><br>
                         <input type="number" class="form-control" id="qty1" placeholder="Enter quantity"/>
                     </div>
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product2" class="bold-label">ORBEA</label><br>
                         <img src="pic2.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product2" id="price2">12500.00</label><br>
                         <input type="number" class="form-control" id="qty2" placeholder="Enter quantity"/>
                     </div>
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product3" class="bold-label">EROADE</label><br>
                         <img src="pic3.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product3" id="price3">15000.00</label><br>
@@ -96,19 +96,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product4" class="bold-label">AVIA</label><br>
                         <img src="pic4.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product4" id="price4">10500.00</label><br>
                         <input type="number" class="form-control" id="qty4" placeholder="Enter quantity"/>
                     </div>
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product5" class="bold-label">HILAND</label><br>
                         <img src="pic5.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product5" id="price5">12000.00</label><br>
                         <input type="number" class="form-control" id="qty5" placeholder="Enter quantity"/>
                     </div>
-                    <div class="col-md-4 text-center product-section">
+                    <div class="col-4 text-center product-section">
                         <label id="product6" class="bold-label">FORGE</label><br>
                         <img src="pic6.jpg" class="img-thumbnail product-img"/><br>
                         <label for="product6" id="price6">13500.00</label><br>
@@ -116,10 +116,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 orders-section">
+            <div class="col-md-4 orders-section">
                 <div class="form-group">
                     <label for="carts">Orders</label>
-                    <textarea class="form-control" rows="5" id="carts" readonly></textarea>
+                    <textarea class="form-control" rows="4" id="carts" readonly></textarea>
                 </div>
                 <div class="form-group">
                     <label for="total">Total</label>
